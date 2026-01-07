@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Captcha Dashboard</title>
+
+<style>
+body{
+  font-family:'Segoe UI',system-ui;
+  background:linear-gradient(135deg,#1e1e2f,#2a2a40);
+  color:#e0e0ff;
+  margin:0;
+  padding:20px;
+  min-width:600px
+}
+h1{text-align:center;color:#bb86fc}
+.container{max-width:820px;margin:auto}
+.card{
+  background:#2e2e4a;
+  border-radius:12px;
+  padding:20px;
+  margin-bottom:20px;
+  box-shadow:0 8px 24px rgba(0,0,0,.4)
+}
+.input-group{display:flex;gap:10px;margin-bottom:12px}
+input,select{
+  flex:1;
+  padding:12px;
+  border:none;
+  border-radius:8px;
+  background:#3a3a55;
+  color:#fff
+}
+button{
+  padding:12px 20px;
+  border:none;
+  border-radius:8px;
+  background:#667eea;
+  color:#fff;
+  font-weight:600;
+  cursor:pointer
+}
+button:hover{background:#5a6fd8}
+.sites-list{list-style:none;padding:0}
+.site-item{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:#3a3a55;
+  padding:12px;
+  border-radius:8px;
+  margin-bottom:10px
+}
+.remove-btn{background:#cf6679}
+.remove-btn:hover{background:#b0465a}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<h1>🔐 Captcha Configuration</h1>
+
+<div class="card">
+  <h2>Add New Site</h2>
+
+  <div class="input-group">
+    <input id="domainInput" placeholder="example.com or *">
+    <select id="captchaTypeSelect">
+      <option value="hcaptcha">hCaptcha</option>
+      <option value="recaptcha_v2">reCAPTCHA v2</option>
+      <option value="recaptcha_v3">reCAPTCHA v3</option>
+      <option value="turnstile">Cloudflare Turnstile</option>
+    </select>
+  </div>
+
+  <div class="input-group">
+    <input id="siteKeyInput" placeholder="Sitekey">
+    <input id="actionInput" placeholder="Action (v3 only)">
+  </div>
+
+  <button id="addConfigurationButton">Add Configuration</button>
+
+  <div style="display:flex;gap:10px;margin-top:15px">
+    <button id="exportButton">⬇ Export JSON</button>
+    <button id="importButton">⬆ Import JSON</button>
+    <input type="file" id="fileInput" accept="application/json" hidden>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Configured Sites</h2>
+  <ul id="sitesList" class="sites-list"></ul>
+</div>
+
+</div>
+<script src="src/optional.js"></script>
+</body>
+</html>
