@@ -115,10 +115,10 @@ Click 📋 **Copy**. The token is copied to the clipboard.
 
 ## 📤 Import & Export Configurations
 
-**Export**  
+**Export** : 
 Open the dashboard → Click ⬇ **Export JSON** → Save the configuration file.
 
-**Import**  
+**Import** :  
 Open the dashboard → Click ⬆ **Import JSON** → Select a valid JSON file. Configurations will be restored.
 
 ---
@@ -132,10 +132,12 @@ Open the dashboard → Click ⬆ **Import JSON** → Select a valid JSON file. C
 ]
 ```
 
-clipboardWrite → Copy captcha tokens
-storage → Save site configurations
+**clipboardWrite → Copy captcha tokens
+storage → Save site configurations**
+
+<b>Creators from <a href="https://t.me/Nickupdates">Nick Updates</a></b>
 
 ## ⚠️ Disclaimer
-This extension is provided for educational, testing, and development purposes only.
+**This extension is provided for educational, testing, and development purposes only.
 You are responsible for how you use this tool.
-Do not use it to violate website terms of service or applicable laws.
+Do not use it to violate website terms of service or applicable laws.**
