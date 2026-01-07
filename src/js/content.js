@@ -63,7 +63,7 @@
     `
 
     const pageScript = document.createElement("script")
-    pageScript.src = chrome.runtime.getURL("page.js")
+    pageScript.src = chrome.runtime.getURL("src/js/page.js")
 
     pageScript.onload = () => {
       pageScript.remove()
