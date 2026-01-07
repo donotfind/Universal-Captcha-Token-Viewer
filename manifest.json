@@ -10,7 +10,7 @@
   ],
   "icons" : {
     
-    "128" : "icon128.png"
+    "128" : "src/icon128.png"
   },
 
   "action": {
