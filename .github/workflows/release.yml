@@ -1,0 +1,27 @@
+name: Build Extension ZIP
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Create ZIP (manifest at root)
+        run: |
+          mkdir -p dist/package
+          cp manifest.json dist/package/
+          cp -r src dist/package/
+          cd dist/package
+          zip -r ../Universal-Captcha-Token-Viewer-${{ github.ref_name }}.zip .
+
+      - name: Upload Release Asset
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/*.zip
