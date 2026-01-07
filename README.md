@@ -45,12 +45,13 @@ This tool is intended for **developers, testers, and educational use**.
 
 ## 📁 Project Structure
 ```
-├── manifest.json       # Extension manifest (MV3)
-├── content.js          # Injects captcha UI on matched domains
-├── page.js             # Loads captcha scripts & captures tokens
-├── dashboard.html      # Popup dashboard UI
-├── optional.js         # Dashboard logic (storage, import/export)
-├── icon128.png         # Extension icon
+├── manifest.json              # Extension manifest (MV3)
+├── src/
+|   └── dashboard.html         # Popup dashboard UI
+|   ├── src/
+|        ├── content.js        # Injects captcha UI on matched domains
+|        ├── page.js           # Loads captcha scripts & captures tokens
+|        ├── optional.js       # Dashboard logic (storage, import/export)
 ```
 
 
