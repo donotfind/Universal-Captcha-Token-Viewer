@@ -1,6 +1,6 @@
 {
   "name": "Universal Captcha Token Viewer",
-  "version": "1",
+  "version": "1.0.0",
   "manifest_version": 3,
   "description": "Extract tokens from hCaptcha, reCAPTCHA v2/v3, and Cloudflare Turnstile",
 
