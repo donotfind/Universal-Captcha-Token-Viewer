@@ -1,0 +1,35 @@
+{
+  "name": "Universal Captcha Token Viewer",
+  "version": "1",
+  "manifest_version": 3,
+  "description": "Extract tokens from hCaptcha, reCAPTCHA v2/v3, and Cloudflare Turnstile",
+
+  "permissions": [
+    "clipboardWrite",
+    "storage"
+  ],
+  "icons" : {
+    
+    "128" : "icon128.png"
+  },
+
+  "action": {
+    "default_popup": "src/dashboard.html",
+    "default_title": "Captcha Configuration"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+
+  "web_accessible_resources": [
+    {
+      "resources": ["src/page.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
