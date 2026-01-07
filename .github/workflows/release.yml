@@ -3,8 +3,7 @@ name: Build Extension ZIP
 on:
   push:
     tags:
-      - "v1.0.0"
-  workflow_dispatch:
+      - "v*.*.*"
 
 permissions:
   contents: write
@@ -14,10 +13,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Prepare package (manifest at root)
+      - name: Prepare package
         run: |
           mkdir -p dist/package
           cp manifest.json dist/package/
